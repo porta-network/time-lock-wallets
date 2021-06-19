@@ -19,7 +19,7 @@ contract TimeLockedWalletFactory is Ownable {
         return walletNames[_wallet];
     }
 
-    function newTimeLockedWallet(
+    function createTimeLockedWallet(
         string memory walletName,
         address _owner, 
         uint256 _unlockDate
