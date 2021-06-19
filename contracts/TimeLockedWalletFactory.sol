@@ -25,7 +25,7 @@ contract TimeLockedWalletFactory is Ownable {
         uint256 _unlockDate
     ) payable public onlyOwner returns(address wallet) {
         // Create new wallet.
-        TimeLockedWallet newWallet = new TimeLockedWallet(msg.sender, _unlockDate);
+        TimeLockedWallet newWallet = new TimeLockedWallet(_owner, _unlockDate);
 
         wallet = address(newWallet);
 
